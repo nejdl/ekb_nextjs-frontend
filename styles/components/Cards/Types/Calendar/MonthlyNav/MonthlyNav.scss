@@ -1,0 +1,51 @@
+.calendarNav{
+
+    display: flex;
+    padding: 0 var(--gapS);
+    padding-right: 20px;
+    // padding: var(--gapM) var(--gapS) var(--gapS) var(--gapS);
+    justify-content: flex-end;
+    
+    .prev, .next{
+        transition: border ease-in-out var(--transitionTimeShort);
+
+        width: var(--gapM);
+        height: var(--gapM);
+        border: solid black;
+        border-width: 0 2px 2px 0;
+        display: inline-block;
+        padding: var(--gapS);
+        // margin-top: 0.65rem;
+        // margin-top: 1em;
+        margin-top: 0.1em;
+        background: none;
+        
+        @media screen and (hover: hover) {
+            &:hover{
+                border-color: var(--hoverColor);
+                cursor: pointer;
+            }
+        }
+    }
+    
+    .prev{
+        margin-left: var(--gapS);
+        transform: rotate(135deg);
+        -webkit-transform: rotate(135deg);
+    }      
+    
+    .next{
+        // margin-right: var(--gapL);
+        margin-right: var(--gapS);
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);      
+    }
+
+    .currentMonth{
+        font-size: var(--fontSizeSM);
+        text-transform: uppercase;
+        // font-size: var(--fontSizeM);
+        padding: var(--gapS);
+        margin-top: calc(var(--gapM) * -1);
+    }
+}

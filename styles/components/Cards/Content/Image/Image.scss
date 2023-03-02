@@ -1,0 +1,24 @@
+.coverImageContainer{
+    width: 100%;
+    height: 200px;
+    
+    .coverImage{
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.coverImageSubtitle, .subtitle{
+    font-size: var(--fontSizeS) !important;
+    color: var(--grey)
+}
+
+.coverImageSubtitle{
+    padding-left: var(--gapS);
+    padding-top: var(--gapS);
+}
+
+.image{
+    width: 100%;
+}

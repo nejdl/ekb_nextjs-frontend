@@ -1,0 +1,27 @@
+h1{
+    font-weight: normal;
+    // line-height: 0.9;
+    padding-top: var(--gapS);
+    
+    &.title {
+        // line-height: 0.8;
+        padding: var(--gapXS);
+        font-size: var(--fontSizeML);
+        font-family: 'EKBSans-Regular';
+        text-transform: uppercase;
+        cursor: pointer;
+        
+        // firefox
+        // @-moz-document url-prefix() {
+        //     &{
+        //         line-height: 1.05;
+        //     }
+        // }
+        // windows chrome
+    }
+
+    &.eventTitle {
+        font-size: var(--fontSizeM);
+        padding-left: 2px;
+    }
+}

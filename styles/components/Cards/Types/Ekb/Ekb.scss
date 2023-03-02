@@ -1,0 +1,14 @@
+.card.ekb{
+
+    // background-color: black;
+    // color: white;
+    
+    img{
+        position: absolute;
+        top: 0;
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        z-index: -100;
+    }
+}

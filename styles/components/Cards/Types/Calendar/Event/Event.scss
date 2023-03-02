@@ -1,0 +1,62 @@
+.event{
+    
+    * {
+        transition: opacity ease-in-out var(--transitionTimeShort);
+    }
+
+    li{
+        list-style: none;
+        text-indent: none;
+        display: flex;
+        margin: var(--gapS) 0;
+        padding: var(--gapS) 0;
+        border-top: 1px solid var(--lightGrey);
+    }
+    
+    @at-root ul .event:last-of-type li{
+        border-bottom: 0px;
+    }
+
+    
+    h3{
+        font-size: var(--fontSizeSM);
+        font-weight: 400;
+    }
+
+    .time{
+        flex: 0 0 45px;
+        padding-right: var(--gapS)
+    }
+    
+    @media screen and (hover:hover) {        
+        // only show hover when event overlay is not open
+        @at-root .calendar:not(.eventOverlayOpen){
+            .event:hover{
+                cursor: pointer;
+                
+                * {
+                    opacity: var(--hoverOpacity);
+                }
+            }
+        }
+    }
+
+}
+
+.eventType{
+    font-size: var(--fontSizeXS);
+    // color: var(--lightGrey);
+    padding: var(--gapXS) var(--gapS) var(--gapS) var(--gapS);
+    margin: 0 var(--gapS) var(--gapS) 0;
+    display: inline-block;
+    border-radius: 10px;
+
+    .eventTypeCircle{
+        width: 0.75em;
+        height: 0.75em;
+        display: inline-block;
+        margin-right: var(--gapS);
+        border-radius: 10px;
+    }
+
+}

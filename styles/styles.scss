@@ -1,0 +1,124 @@
+// general
+@import 'variables.scss';
+
+// pages
+@import './pages/index.scss';
+
+// components
+@import './components/Cards/Card/Card.scss';
+@import './components/Cards/Types/Calendar/Calendar.scss';
+@import './components/Cards/Types/Calendar/MonthlyNav/MonthlyNav.scss';
+@import './components/Cards/Types/Calendar/Event/Event.scss';
+@import './components/Cards/Types/Calendar/EventOverlay/EventOverlay.scss';
+@import './components/Cards/Labels/Labels.scss';
+@import './components/Cards/Types/Ekb/Ekb.scss';
+
+// content
+@import './components/Content/Content.scss';
+@import './components/Content/Image/Image.scss';
+@import './components/Content/InfoBox/InfoBox.scss';
+@import './components/Content/Accordion/Accordion.scss';
+@import './components/Content/EventMetaData/EventMetaData.scss';
+@import './components/Content/Title/Title.scss';
+@import './components/Content/File/File.scss';
+@import './components/Content/Text/SimpleText.scss';
+@import './components/Content/Text/TextBlock.scss';
+@import './components/Content/Embed/Embed.scss';
+@import './components/Content/NewsletterSubscription/NewsletterSubscription.scss';
+
+// interism modal
+@import './components/InterimsModal/InterimsModal.scss';
+
+// import fonts
+@font-face {
+  font-family: 'OPSCubic-Regular';
+  src: url('/assets/fonts/OPSCubic-Regular.woff') format('woff'),
+       url('/assets/fonts/OPSCubic-Regular.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'OPSCubic-Italic';
+  src: url('/assets/fonts/OPSCubic-Italic.woff') format('woff'),
+       url('/assets/fonts/OPSCubic-Italic.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'OPSCubic-Bold';
+  src: url('/assets/fonts/OPSCubic-Bold.woff') format('woff'),
+       url('/assets/fonts/OPSCubic-Bold.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'OPSCubic-BoldItalic';
+  src: url('/assets/fonts/OPSCubic-BoldItalic.woff') format('woff'),
+       url('/assets/fonts/OPSCubic-BoldItalic.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'EKBSans-Regular';
+  src: url('/assets/fonts/EKBSans-Regular.woff') format('woff'),
+       url('/assets/fonts/EKBSans-Regular.woff2') format('woff2');
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'OPSCubic-Regular';
+  font-size: var(--fontSizeS);
+  overflow-wrap: break-word; 
+}
+
+strong{
+  font-family: 'OPSCubic-Bold';
+}
+
+em{
+  font-family: 'OPSCubic-Italic';
+}
+
+strong em, em strong{
+  font-family: 'OPSCubic-BoldItalic';
+}
+
+
+input, button {
+  font-family: inherit !important;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+div{
+  // border: var(--borderSize) solid black;
+}
+
+/* lists */
+ul:first-of-type, ol:first-of-type{
+  margin-top: 0;
+}
+
+ol{
+  margin-left: 0;
+}
+
+ol *, ul * {
+  text-indent: 0 !important;
+}
+
+li{
+  white-space: normal !important;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+}
+
+a{
+  color: inherit;
+  transition: color ease-in-out var(--transitionTimeShort);
+  text-decoration-thickness: from-font;
+  // text-decoration-thickness: 1px;
+  
+  &:hover{
+    color: var(--grey);
+
+  }
+}

@@ -1,0 +1,91 @@
+.label{
+    position: fixed;
+
+    // RANDOM POSITIONING VIA JS
+    top: var(--openCallLabelMarginTop);
+    right: var(--openCallLabelMarginRight);
+    
+    // @media screen and (max-width: 700px) {
+    //     &{
+    //         top: var(--openCallLabelMarginTopMobile);
+    //         right: var(--openCallLabelMarginRightMobile);
+    //     }
+    // }
+
+    width: var(--labelRadius);
+    height: var(--labelRadius);
+    border-radius: var(--labelRadius);
+
+    background-color: black;
+    color: white;
+    // box-shadow: var(--boxShadowOverlay);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .closeButtonContainer{
+        position: absolute;
+        top: 0;
+        left: 50%;
+        padding-top: var(--gapS);
+    }
+    .closeButton{
+        transform: translateX(-50%);
+    }
+    .closeButton:after, .closeButton:before{
+        background-color: white;
+    }
+
+    &.hidden{
+        display: none;
+    }
+
+    p {
+        padding: var(--gapS);
+        display: -webkit-box;
+        text-align: center;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    // LOGO LABEL SPECIFIC STYLING
+
+    // RANDOM POSITIONING VIA JS
+    // different positioning for logo label
+    &.logo{
+        top: var(--logoLabelMarginTop);
+        right: var(--logoLabelMarginRight);
+        
+        // @media screen and (max-width: 700px) {
+        //     &{
+        //         top: var(--logoLabelMarginTopMobile);
+        //         right: var(--logoLabelMarginRightMobile);
+        //     }
+        // }
+    }
+
+    // // different color for logo label
+    // &.logo{
+    //     background-color: white;
+    //     color: black;
+    // }
+
+    // &.logo{
+    //     .closeButton:after, .closeButton:before{
+    //         background-color: black;
+    //     }
+    // }
+
+}
+
+.logoContainer{
+
+    object-fit: contain;
+    
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}

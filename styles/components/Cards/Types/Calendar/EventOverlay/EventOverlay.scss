@@ -1,0 +1,88 @@
+.eventOverlay{
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 0%; /* option 2: no background-blur but transition */
+    transition: height ease-in-out var(--transitionTimeLong); /* option 2: no background-blur but transition */
+    box-shadow: var(--boxShadowOverlay);
+    overflow: hidden;
+
+    &.open{
+        height: calc(100% - var(--collapsedCardHeight));
+        overflow: scroll;
+    }
+    
+    @supports (backdrop-filter: none) {
+        & {
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.3);  
+            // safari exception
+            @media not all and (min-resolution:.001dpcm) { 
+                background-color: white;
+            }
+        }
+    }
+
+}
+
+// FIX ME: put me in a seperate component
+.closeButtonContainer{
+
+    position: sticky;
+    float: right;
+    height: 0;
+    top: var(--gapM);
+    right: var(--gapM);
+    
+    .closeButton{
+        position: relative;
+        width: var(--closeButtonIcon);
+        height: var(--closeButtonIcon);
+        padding: var(--gapS);
+
+        &:before,
+        &:after{
+            content: "";
+            position: absolute;
+            background-color: black;
+            transition: transform 0.25s ease-out;
+        }
+
+        /* Vertical line */
+        &:before{
+            top: 0;
+            left: 50%;
+            width: 2px;
+            height: 100%;
+            margin-left: -2px;
+            transform: rotate(45deg); 
+        }
+        
+        /* horizontal line */
+        &:after{
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            margin-top: -2px;
+            transform: rotate(45deg); 
+        }
+        
+        &:hover{
+            cursor: pointer;
+
+            &:before,
+            &:after{
+                content: "";
+                position: absolute;
+                background-color: grey;
+            }
+
+            &:before{ transform: rotate(225deg); }
+            &:after{ transform: rotate(225deg); }
+        }
+        
+    }
+}

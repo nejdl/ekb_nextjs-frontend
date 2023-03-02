@@ -1,0 +1,53 @@
+.calendar{
+    &.eventOverlayOpen{
+        overflow-y: hidden;
+    }
+}
+
+.calendarSubcontainer{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+
+    ul{
+        padding: 0;
+        margin: 0;
+    }
+
+}
+
+// calendar borders
+.rc-border-l-2, .rc-border-t-2, .rc-border-b-2, .rc-border-r-2{
+    border-width: 1px !important;
+}
+.rc-border-l-2{
+    border-left: solid var(--lightGrey);
+}
+
+.rc-border-t-2{
+    border-top: solid var(--lightGrey);
+}
+.rc-border-b-2{
+    border-bottom: solid var(--lightGrey);
+}
+.rc-border-r-2{
+    border-right: solid var(--lightGrey);
+}
+
+.rc-font-bold, .rc-block{
+    font-size: var(--fontSizeS);
+    font-weight: 400 !important;
+    color: var(--lightGrey);
+}
+
+.rc-font-bold{
+    font-size: var(--fontSizeSM);
+    // font-family: 'OPSCubic-Bold';
+    // color: inherit;
+}
+
+.rc-max-h-36{
+    max-height: 10.25rem !important;
+    position: relative;
+}

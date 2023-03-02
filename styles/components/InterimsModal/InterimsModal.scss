@@ -1,0 +1,32 @@
+.interimsModal{
+    display: none;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    padding: var(--gapM);
+
+    .closeButton{
+        font-size: var(--fontSizeM);
+        position: absolute;
+        top: 0;
+        right: var(--gapS);
+        cursor: pointer;
+    }
+
+    @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+        & {
+          -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+          background-color: rgba(255, 255, 255, 0.3);  
+        }
+    }
+
+    &.open{
+        display: flex;
+    }
+}

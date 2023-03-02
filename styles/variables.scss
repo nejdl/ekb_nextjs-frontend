@@ -1,0 +1,62 @@
+:root{
+    // sizes
+    --gapXS: 3px;
+    --gapS: 5px;
+    --gapM: 10px;
+    --gapL: 20px;
+
+    // icon sizes
+    --closeButtonIcon: 21px;
+
+    // border size
+    --borderSize: 1px;
+
+    // font sizes
+    --fontSizeXS: 10px;
+    --fontSizeS: 15px;
+    --fontSizeSM: 20px;
+    --fontSizeM: 40px;
+    --fontSizeML: 60px;
+    --fontSizeL: 80px;
+
+    // card height
+    // --collapsedCardHeight: 40px;
+    --collapsedCardHeight: 58px;
+    @media screen and (max-height: 800px) {
+        // --collapsedCardHeight: 40px;
+    }
+    @media screen and (max-height: 600px) {
+        // --collapsedCardHeight: 40px;
+    }
+
+    // transition
+    --transitionTimeShort: 0.1s;
+    --transitionTimeLong: 0.3s;
+    // box shadow
+    // --boxShadow: 0 1px 0 black;
+    --boxShadow: 0 -5px 10px rgba(0,0,0,0.5);
+    --boxShadowOverlay: 0 -5px 10px rgba(0, 0, 0, 0.5);
+
+    // open call label
+    --labelRadius: 150px;
+    // RANDOM POSITIONING VIA JS
+    --openCallLabelMarginRight: 200px;
+    --openCallLabelMarginRightMobile: 30px;
+    --openCallLabelMarginTop: 10px;
+    --openCallLabelMarginTopMobile: 40vh;
+
+    // logo label
+    // RANDOM POSITIONING VIA JS
+    --logoLabelMarginTop: 70vh;
+    --logoLabelMarginRight: 60vw;
+    --logoLabelMarginTopMobile: 70vh;
+    --logoLabelMarginRightMobile: 60vw;
+
+    // colors
+    --grey: grey;
+    --lightGrey: lightgrey;
+    
+    // hover
+    --hoverOpacity: 0.7;
+    --hoverColor: var(--lightGrey);
+}

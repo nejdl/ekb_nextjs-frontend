@@ -1,0 +1,34 @@
+.siteBody{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.card{
+    flex: 0 0 var(--collapsedCardHeight);
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: var(--boxShadow);
+    transition: flex ease-in-out var(--transitionTimeShort);
+    position: relative;
+    
+    &:hover{
+        flex: 0 0 calc(var(--collapsedCardHeight)* 1.2);
+        transition: flex ease-in-out var(--transitionTimeShort);
+    }
+    
+    &.open{
+        flex: 1 1 100%;
+        overflow-y: scroll;
+        cursor: auto;
+        &:hover{
+            flex: 1 1 100%;
+        }
+    }
+
+    h1{
+        margin: 0;
+        margin-bottom: var(--gapS);
+    }
+
+}

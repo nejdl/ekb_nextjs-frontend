@@ -1,0 +1,45 @@
+.newsletterSubscriptionText, .newsletterSubscriptionForm{
+    // display: inline-block;
+}
+
+.newsletterSubscriptionText{
+    padding-right: var(--gapS);
+    // padding-bottom: var(--gapS);
+}
+
+.newsletterSubscriptionForm{
+    input{
+        border-radius: 50px;
+        padding-left: var(--gapM);
+        margin-top: var(--gapS);
+        margin-right: var(--gapS);
+        
+        &::placeholder{
+            color: var(--lightGrey);
+        }
+        
+        @at-root .rightSide{
+            input{
+                padding-left: var(--gapS);
+            }
+        }
+        
+        outline: none;
+        border: var(--borderSize) solid black;
+    }
+    
+    button{
+        transition: background-color ease-in-out var(--transitionTimeShort), border ease-in-out var(--transitionTimeShort);
+        background-color: black;
+        color: white;
+        outline: none;
+        border-radius: 50px;
+        border: var(--borderSize) solid black;
+        cursor: pointer;
+        
+        &:hover{
+            border: var(--borderSize) solid var(--grey);
+            background-color: var(--grey);
+        }
+    }
+}
